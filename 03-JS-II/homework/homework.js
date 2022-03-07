@@ -112,12 +112,14 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-if (numero % 1===0) {
-  return true
-}
- return false
-}
+  if (numero % 1===0) {
+    return true
+  }
+   return false
+  
+  
 
+}
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
@@ -163,7 +165,7 @@ function esPrimo(numero) {
   // Nota: Los números 0 y 1 NO son considerados números primos
 
   if( numero < 2) return false;
-  if(numero === 2) return true;
+  //if(numero === 2) return true;
   for(var i = 2; i < numero; i++) {
     if(numero % i === 0) {
       return false;
@@ -218,7 +220,7 @@ var suma = numero;
 var i=0
 do {
   suma = suma + 5
-  i++ //8
+  i++ 
   } 
   while (i < 8 )
    return suma
