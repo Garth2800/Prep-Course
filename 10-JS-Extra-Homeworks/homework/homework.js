@@ -71,16 +71,18 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-var cambios = str.split(" ").map(function(el){
+var cambios = str.split(" ").map(function(el){  // split divide los valores de un string en un array
 return el.split("").reverse().join("");
 })
 return cambios.join(" ");
 
 } 
 
-// reverse se aplica a arrays
+// Split divide los elementos de un string en un array==>"culo"[c,u,l,o"]
+// reverse invierte los ordenes de los elementos ==>[o,l,u,c]
+// join une los elementos de un array en un string ==> "oluc"
 // las comillas del segundo punto van sin espacio ya que mostrará los elementos separados
-//.join convertirá el elemento en una strin
+//.join convertirá los elementos del array en un string
 
 
 function capicua(numero){
@@ -88,7 +90,7 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
-let cadena= numero.toString()
+let cadena= numero.toString()   //==> se usa para cambiar en una variable los valores numericos en strings
 let cadenainver= ""
 cadenainver = cadena.split("").reverse().join("")
 if (cadena === cadenainver){
@@ -100,6 +102,7 @@ else {
 
 
 }
+
 
 //primero los separa, luego los revierte, luego los agurpa
 
@@ -123,20 +126,10 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
- // for (let i = 0; i < arr.length; i++) { // con este recorremos el array
- //   var temp = arr[i]
- // //  var j = i - 1
- //   while (j < 0 && temp.length < arr[j].lenght){
- //     arr[j +1] = arr[j] 
- //     j--
- //   }
- //   arr [j+1] = temp
- // }//
- // return arr
- 
 
+  return arr.sort((a,b)=>a.length - b.length)
 }
-// return arr.sort(a,b)=>a.length - b.length
+// 
 
 
 // su a-b es negativo, primero va "a".
